@@ -24,6 +24,6 @@ router.patch('/fakultas/:id', FakultasController.update)
 router.delete('/fakultas/:id', FakultasController.delete)
 
 router.post('/prodi', ProdiController.store)
-
+router.get('/prodi', ProdiController.index)
 
 export default router

@@ -4,7 +4,28 @@ import { apiResponse, apiResponseValidation } from "../utils/response.js"
 
 class FakultasController {
     static async index(req, res) {
-        const listFakultas = await fakultasModel.find()
+        const { search, sortBy = "createdAt", sort } = req.query
+
+        const filter = {}
+
+        if (search) {
+            filter.name = {
+                $regex: search,
+                $options: "i"
+            }
+        }
+
+        const sortOption = {
+            [sortBy]: sort === "desc" ? -1 : 1,
+        }
+
+        const listFakultas = await fakultasModel.find(filter)
+        .select({
+            _id: 1,
+            name: 1
+        })
+        .sort(sortOption);
+
         return apiResponse({
             res,
             status: 200,

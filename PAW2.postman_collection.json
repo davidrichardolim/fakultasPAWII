@@ -164,6 +164,51 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Update Prodi",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"kode\" : \"SI-UPDATE-1\",\r\n    \"nama_prodi\" : \"Sistem Informasi update 1\",\r\n    \"fakultas_id\" : \"6ac9d1f0e64d04fe63944724\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/prodi/6ac9d26fe64d04fe63944725",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "prodi",
+                "6ac9d26fe64d04fe63944725"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Prodi",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/prodi/6ac9d26fe64d04fe63944725",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "prodi",
+                "6ac9d26fe64d04fe63944725"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     }

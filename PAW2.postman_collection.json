@@ -18,7 +18,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"Fakultas Ilmu Komputer\"\r\n}",
+              "raw": "{\r\n  \"name\": \"Fakultas Ilmu Design\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -42,13 +42,45 @@
           "request": {
             "method": "GET",
             "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
-              "raw": "{{BASE_URL}}/fakultas",
+              "raw": "{{BASE_URL}}/fakultas?sort=asc&sortBy=name&page=1&limit=2",
               "host": [
                 "{{BASE_URL}}"
               ],
               "path": [
                 "fakultas"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "ilmu",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "asc"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "name"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "2"
+                }
               ]
             }
           },
